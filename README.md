@@ -73,4 +73,4 @@ Genera el código para la sección "La Historia: De la tierrita pal mundo." usan
 A la izquierda, un bloque de texto con tipografía limpia ('Inter') que narre la historia de tecno mobile con tono paisa y honesto: "En tecno mobile empezamos con una caja de herramientas, muchas ganas de camellar y la firme convicción de que la tecnología no tiene por qué ser un dolor de cabeza...".
 A la derecha, un contenedor grande para una fotografía del equipo o del taller en blanco y negro, la cual debe estar enmarcada por un contenedor contenedor externo que use un degradado suave o bordes flotantes para darle tridimensionalidad a la landing page.
 
-
+https://claude.ai/share/64a95704-d28b-4cbb-84ef-9dc090133552
