@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tecno mobile</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white">
+
+<!-- ============ NAVBAR ============ -->
+<header class="sticky top-0 z-50 w-full bg-black text-white">
+  <nav class="w-full max-w-[1400px] mx-auto flex items-center justify-between gap-4 px-5 sm:px-8 py-4 box-border">
+    <!-- Logo -->
+    <a href="#inicio" class="font-grotesk font-bold text-xl sm:text-2xl tracking-tight shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">
+      tecno mobile
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8 lg:gap-10 text-sm font-medium tracking-wide">
+      <li><a href="#inicio" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Inicio</a></li>
+      <li><a href="#servicios" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Servicios</a></li>
+      <li><a href="#portafolio" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Portafolio</a></li>
+      <li><a href="#quienes-somos" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Quiénes Somos</a></li>
+      <li><a href="#contacto" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Contacto</a></li>
+    </ul>
+
+    <!-- Mobile menu button -->
+    <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" class="md:hidden shrink-0 w-9 h-9 flex flex-col items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">
+      <span class="block w-6 h-px bg-white"></span>
+      <span class="block w-6 h-px bg-white"></span>
+      <span class="block w-6 h-px bg-white"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu panel -->
+  <div id="menuPanel" class="md:hidden hidden border-t border-white/15">
+    <ul class="flex flex-col px-5 py-4 gap-4 text-sm font-medium">
+      <li><a href="#inicio" class="block py-1 hover:opacity-70 transition-opacity">Inicio</a></li>
+      <li><a href="#servicios" class="block py-1 hover:opacity-70 transition-opacity">Servicios</a></li>
+      <li><a href="#portafolio" class="block py-1 hover:opacity-70 transition-opacity">Portafolio</a></li>
+      <li><a href="#quienes-somos" class="block py-1 hover:opacity-70 transition-opacity">Quiénes Somos</a></li>
+      <li><a href="#contacto" class="block py-1 hover:opacity-70 transition-opacity">Contacto</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="bg-white text-black px-5 sm:px-8">
+  <div class="max-w-[900px] mx-auto min-h-[calc(100vh-73px)] flex flex-col items-center justify-center text-center py-20">
+
+    <h1 class="font-syne font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+      Tecnología, Código<br class="hidden sm:block"> y Perspectiva.
+    </h1>
+
+    <p class="mt-8 max-w-2xl text-base sm:text-lg text-black/70 leading-relaxed">
+      Desarrollo de software a medida, control de calidad, hardware de última generación y producción visual.
+    </p>
+
+    <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+      <a href="#servicios"
+         class="w-full sm:w-auto text-center px-10 py-4 bg-black text-white text-sm font-semibold tracking-wide hover:bg-black/85 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2">
+        Ver Servicios
+      </a>
+      <a href="#contacto"
+         class="w-full sm:w-auto text-center px-10 py-4 border border-black text-black text-sm font-semibold tracking-wide hover:bg-black hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2">
+        Contáctanos
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios" class="bg-white px-5 sm:px-8 py-20 sm:py-28">
+  <div class="max-w-[1300px] mx-auto">
+
+    <div class="mb-14 sm:mb-16 max-w-xl">
+      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-black tracking-tight">Servicios</h2>
+      <p class="mt-4 text-black/60 text-base leading-relaxed">
+        Cuatro disciplinas, un mismo estándar de precisión.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#222222] border border-[#222222]">
+
+      <!-- Card 1 -->
+      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
+        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="8 9 4 12 8 15"></polyline>
+          <polyline points="16 9 20 12 16 15"></polyline>
+          <line x1="13" y1="6" x2="11" y2="18"></line>
+        </svg>
+        <div>
+          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Desarrollo &amp; Testing</h3>
+          <p class="text-sm text-black/60 leading-relaxed">
+            Construcción de aplicaciones robustas, arquitectura de software y aseguramiento de calidad (QA).
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
+        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="4" width="16" height="10" rx="1"></rect>
+          <line x1="8" y1="20" x2="16" y2="20"></line>
+          <line x1="12" y1="14" x2="12" y2="20"></line>
+        </svg>
+        <div>
+          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Tienda de Tecnología</h3>
+          <p class="text-sm text-black/60 leading-relaxed">
+            Hardware premium, componentes optimizados y dispositivos de última generación.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
+        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 8a2 2 0 0 1 2-2h1.2a1 1 0 0 0 .83-.45L9 4h6l.97 1.55a1 1 0 0 0 .83.45H18a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path>
+          <circle cx="12" cy="13" r="3.2"></circle>
+        </svg>
+        <div>
+          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Fotografía Profesional</h3>
+          <p class="text-sm text-black/60 leading-relaxed">
+            Producción audiovisual, dirección de arte digital y edición de alta fidelidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
+        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <div>
+          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Soporte Técnico</h3>
+          <p class="text-sm text-black/60 leading-relaxed">
+            Diagnóstico, reparación de computadores, mantenimiento preventivo y optimización de sistemas.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const menuPanel = document.getElementById('menuPanel');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = !menuPanel.classList.contains('hidden');
+    menuPanel.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+</script>
+
+</body>
+</html>
