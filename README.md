@@ -6,3 +6,11 @@ En la sesión de los servicios, agregar botones donde lleven a formularios para 
 #PAGINA DE SOBRE NOSOTROS
 
 Agregar la foto del gordo en el quipo
+
+#BABRRA DE NAVEGACION 
+
+Se debe adaptar el nuevo elemento de la lista (Sobre Nostros) Al resto de las paginas del sitio.
+
+#INDEX
+
+El archivo index.html tiene la primera letra en mayuscula "I" es un mal uso del enrutamiento.
