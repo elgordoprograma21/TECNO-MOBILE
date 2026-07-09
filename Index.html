@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tecno mobile</title>
+<title>Tecno Mobile — Tecnología con berraquera</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,142 +12,295 @@
 </head>
 <body class="bg-white">
 
-<!-- ============ NAVBAR ============ -->
-<header class="sticky top-0 z-50 w-full bg-black text-white">
-  <nav class="w-full max-w-[1400px] mx-auto flex items-center justify-between gap-4 px-5 sm:px-8 py-4 box-border">
-    <!-- Logo -->
-    <a href="#inicio" class="font-grotesk font-bold text-xl sm:text-2xl tracking-tight shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">
-      tecno mobile
-    </a>
+<!-- ============ NAVBAR: floating island ============ -->
+<header class="fixed top-0 inset-x-0 z-50 px-4 sm:px-6 pt-4">
+  <div class="max-w-4xl mx-auto">
+    <nav id="island" class="island rounded-full">
+      <div id="islandInner" class="island-inner flex items-center justify-between gap-4 px-5 sm:px-7 py-3">
+        <a href="#inicio" class="font-grotesk font-bold text-lg sm:text-xl text-white tracking-tight shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">
+          Tecno Mobile
+        </a>
 
-    <!-- Desktop links -->
-    <ul class="hidden md:flex items-center gap-8 lg:gap-10 text-sm font-medium tracking-wide">
-      <li><a href="#inicio" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Inicio</a></li>
-      <li><a href="#servicios" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Servicios</a></li>
-      <li><a href="#portafolio" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Portafolio</a></li>
-      <li><a href="#quienes-somos" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Quiénes Somos</a></li>
-      <li><a href="#contacto" class="nav-link transition-opacity duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Contacto</a></li>
-    </ul>
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium font-grotesk">
+          <li><a href="#inicio" class="nav-link focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Servicios</a></li>
+          <li><a href="#portafolio" class="nav-link focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Portafolio</a></li>
+          <li><a href="#historia" class="nav-link focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">La Historia</a></li>
+          <li><a href="sobre_nosotros.html" class="nav-link focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">Sobre Nosotros</a></li>
+        </ul>
 
-    <!-- Mobile menu button -->
-    <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" class="md:hidden shrink-0 w-9 h-9 flex flex-col items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">
-      <span class="block w-6 h-px bg-white"></span>
-      <span class="block w-6 h-px bg-white"></span>
-      <span class="block w-6 h-px bg-white"></span>
-    </button>
-  </nav>
+        <a href="#contacto" class="hidden md:inline-flex glass-pill rounded-full px-5 py-2 text-xs font-bold font-grotesk text-white hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+          Contáctenos
+        </a>
 
-  <!-- Mobile menu panel -->
-  <div id="menuPanel" class="md:hidden hidden border-t border-white/15">
-    <ul class="flex flex-col px-5 py-4 gap-4 text-sm font-medium">
-      <li><a href="#inicio" class="block py-1 hover:opacity-70 transition-opacity">Inicio</a></li>
-      <li><a href="#servicios" class="block py-1 hover:opacity-70 transition-opacity">Servicios</a></li>
-      <li><a href="#portafolio" class="block py-1 hover:opacity-70 transition-opacity">Portafolio</a></li>
-      <li><a href="#quienes-somos" class="block py-1 hover:opacity-70 transition-opacity">Quiénes Somos</a></li>
-      <li><a href="#contacto" class="block py-1 hover:opacity-70 transition-opacity">Contacto</a></li>
-    </ul>
+        <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" class="md:hidden shrink-0 w-8 h-8 flex flex-col items-center justify-center gap-1.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-white rounded-sm">
+          <span class="block w-5 h-px bg-white"></span>
+          <span class="block w-5 h-px bg-white"></span>
+          <span class="block w-5 h-px bg-white"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu panel -->
+    <div id="menuPanel" class="md:hidden hidden mt-2 island rounded-3xl overflow-hidden">
+      <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium font-grotesk text-white">
+        <li><a href="#inicio" class="block py-1">Inicio</a></li>
+        <li><a href="#servicios" class="block py-1">Servicios</a></li>
+        <li><a href="#portafolio" class="block py-1">Portafolio</a></li>
+        <li><a href="#historia" class="block py-1">La Historia</a></li>
+        <li><a href="#contacto" class="block py-1 font-bold">Contáctenos</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section id="hero" class="bg-white text-black px-5 sm:px-8">
-  <div class="max-w-[900px] mx-auto min-h-[calc(100vh-73px)] flex flex-col items-center justify-center text-center py-20">
+<section id="inicio" class="bg-white px-5 sm:px-8 pt-32 pb-20 sm:pt-40 sm:pb-28">
+  <div class="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center">
 
-    <h1 class="font-syne font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
-      Tecnología, Código<br class="hidden sm:block"> y Perspectiva.
-    </h1>
+    <!-- Texto -->
+    <div class="flex flex-col">
+      <span class="font-grotesk text-xs font-bold tracking-[0.25em] text-black/50 uppercase mb-6">
+        Código · Tecnología · Fotografía
+      </span>
+      <h1 class="font-syne font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-black">
+        Tecnología con berraquera: código, tecnología y buena fotografía.
+      </h1>
+      <p class="mt-7 max-w-lg text-base sm:text-lg text-black/65 leading-relaxed">
+        Aquí no nos varamos por nada. Nos le medimos al desarrollo de software, al testing más riguroso, a equipos premium y a dejar su computador volando.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+        <a href="#servicios" class="w-full sm:w-auto text-center px-9 py-4 bg-black text-white text-sm font-semibold font-grotesk tracking-wide hover:bg-black/85 transition-colors duration-300 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2">
+          Ver nuestros servicios
+        </a>
+        <a href="#contacto" class="w-full sm:w-auto text-center px-9 py-4 border border-black text-black text-sm font-semibold font-grotesk tracking-wide hover:bg-black hover:text-white transition-colors duration-300 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2">
+          Hablemos pues
+        </a>
+      </div>
+    </div>
 
-    <p class="mt-8 max-w-2xl text-base sm:text-lg text-black/70 leading-relaxed">
-      Desarrollo de software a medida, control de calidad, hardware de última generación y producción visual.
-    </p>
+    <!-- Fotografía -->
+    <div class="relative">
+      <div class="tech-photo grain relative rounded-[2rem] overflow-hidden aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none shadow-2xl">
+        <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783039479/IMG_4905_hkmm0f.jpg" alt="Fotografía de equipo tecnológico" class="object-cover w-full h-full">
+      </div>
 
-    <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-      <a href="#servicios"
-         class="w-full sm:w-auto text-center px-10 py-4 bg-black text-white text-sm font-semibold tracking-wide hover:bg-black/85 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2">
-        Ver Servicios
-      </a>
-      <a href="#contacto"
-         class="w-full sm:w-auto text-center px-10 py-4 border border-black text-black text-sm font-semibold tracking-wide hover:bg-black hover:text-white transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2">
-        Contáctanos
-      </a>
+      <div class="glass-card absolute left-6 bottom-6 sm:left-8 sm:bottom-8 rounded-2xl px-5 py-4 max-w-[220px]">
+        <p class="font-grotesk text-white text-sm font-bold leading-snug">Polideportivo Tulio Ospina</p>
+        <p class="font-inter text-white/60 text-xs mt-1">Bello - Antioquia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS: ============ -->
+<section id="servicios" class="bg-black px-5 sm:px-8 py-20 sm:py-28 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image:repeating-linear-gradient(90deg,#fff 0px,#fff 1px,transparent 1px,transparent 60px),repeating-linear-gradient(0deg,#fff 0px,#fff 1px,transparent 1px,transparent 60px);"></div>
+
+  <div class="max-w-[1300px] mx-auto relative">
+    <div class="mb-14 sm:mb-16 max-w-xl">
+      <span class="font-grotesk text-xs font-bold tracking-[0.25em] text-white/45 uppercase">Servicios</span>
+      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-white tracking-tight mt-3">Nuestros Servicios</h2>
+      <p class="mt-4 text-white/55 text-base leading-relaxed">
+        Cuatro frentes, un mismo estándar: bien hecho o no se hace.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- Card 1 -->
+      <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:bg-white/[0.08] transition-colors duration-300">
+        <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="8 9 4 12 8 15"></polyline>
+          <polyline points="16 9 20 12 16 15"></polyline>
+          <line x1="13" y1="6" x2="11" y2="18"></line>
+        </svg>
+        <div class="flex flex-col flex-1">
+          <h3 class="font-grotesk font-bold text-lg text-white mb-2">Desarrollo &amp; Testing a la Medida</h3>
+          <p class="text-sm text-white/55 leading-relaxed">
+            Programamos software robusto y le hacemos un testing tan fino que no se nos escapa nada. Código bien melo.
+          </p>
+          <a href="desarrollo.html" class="glass-pill mt-5 inline-flex w-fit rounded-full px-5 py-2 text-xs font-bold font-grotesk text-white hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+            Ver servicio
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:bg-white/[0.08] transition-colors duration-300">
+        <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="4" width="16" height="10" rx="1"></rect>
+          <line x1="8" y1="20" x2="16" y2="20"></line>
+          <line x1="12" y1="14" x2="12" y2="20"></line>
+        </svg>
+        <div class="flex flex-col flex-1">
+          <h3 class="font-grotesk font-bold text-lg text-white mb-2">Tecnología</h3>
+          <p class="text-sm text-white/55 leading-relaxed">
+            Venta de equipos, componentes y gadgets premium para que rinda en el día a día.
+          </p>
+          <a href="producto.html" class="glass-pill mt-5 inline-flex w-fit rounded-full px-5 py-2 text-xs font-bold font-grotesk text-white hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+            Ver servicio
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:bg-white/[0.08] transition-colors duration-300">
+        <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 8a2 2 0 0 1 2-2h1.2a1 1 0 0 0 .83-.45L9 4h6l.97 1.55a1 1 0 0 0 .83.45H18a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path>
+          <circle cx="12" cy="13" r="3.2"></circle>
+        </svg>
+        <div class="flex flex-col flex-1">
+          <h3 class="font-grotesk font-bold text-lg text-white mb-2">Fotografía Profesional</h3>
+          <p class="text-sm text-white/55 leading-relaxed">
+            Producción visual y dirección de arte digital. Capturamos la esencia de su proyecto con la mejor definición.
+          </p>
+          <a href="#portafolio" class="glass-pill mt-5 inline-flex w-fit rounded-full px-5 py-2 text-xs font-bold font-grotesk text-white hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+            Ver servicio
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="glass-card rounded-2xl p-8 flex flex-col gap-6 hover:bg-white/[0.08] transition-colors duration-300">
+        <svg class="w-9 h-9 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <div class="flex flex-col flex-1">
+          <h3 class="font-grotesk font-bold text-lg text-white mb-2">Soporte y Arreglo de Computadores</h3>
+          <p class="text-sm text-white/55 leading-relaxed">
+            Mantenimiento preventivo, diagnóstico y reparación para dejar su equipo como un cohete.
+          </p>
+          <a href="soporte.html" class="glass-pill mt-5 inline-flex w-fit rounded-full px-5 py-2 text-xs font-bold font-grotesk text-white hover:bg-white hover:text-black transition-colors duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-white">
+            Ver servicio
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTAFOLIO: Servicios ============ -->
+<section id="portafolio" class="bg-white px-5 sm:px-8 py-20 sm:py-28">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="mb-14 sm:mb-16 max-w-xl">
+      <span class="font-grotesk text-xs font-bold tracking-[0.25em] text-black/45 uppercase">Portafolio</span>
+      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-black tracking-tight mt-3">Nuestro Trabajo Fotográfico</h2>
+      <p class="mt-4 text-black/60 text-base leading-relaxed">
+        Muestras de lo que hemos camellado: fotos.
+      </p>
+    </div>
+
+    <div class="masonry">
+
+      <div class="masonry-item group relative rounded-2xl overflow-hidden">
+        <div class="tech-photo tech-photo-alt-1 grain h-72 w-full">
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783038327/IMG_4435_rby9ed.jpg" alt="Portafolio 1" class="object-cover w-full h-full">
+        </div>
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <p class="font-grotesk text-white font-bold text-lg">Rostros</p>
+        </div>
+      </div>
+
+      <div class="masonry-item group relative rounded-2xl overflow-hidden">
+        <div class="tech-photo tech-photo-alt-2 grain h-96 w-full">
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783038236/IMG_4345_gqyqv8.jpg" alt="Portafolio 2" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <p class="font-grotesk text-white font-bold text-lg">Modelos</p>
+        </div>
+      </div>
+
+      <div class="masonry-item group relative rounded-2xl overflow-hidden">
+        <div class="tech-photo tech-photo-alt-3 grain h-60 w-full">
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783039162/IMG_4594_lmpfgf.jpg" alt="">
+        </div>
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <p class="font-grotesk text-white font-bold text-lg">Paisajes</p>
+        </div>
+      </div>
+
+      <div class="masonry-item group relative rounded-2xl overflow-hidden">
+        <div class="tech-photo grain h-80 w-full">
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783039578/IMG_5391_faquro.jpg" alt="">
+        </div>
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <p class="font-grotesk text-white font-bold text-lg">Paisajes en panorámico</p>
+        </div>
+      </div>
+
+      <div class="masonry-item group relative rounded-2xl overflow-hidden">
+        <div class="tech-photo tech-photo-alt-1 grain h-64 w-full">
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783038347/IMG_4204_cbt1c9.jpg" alt="">
+        </div>
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <p class="font-grotesk text-white font-bold text-lg">Productos</p>
+        </div>
+      </div>
+
+      <div class="masonry-item group relative rounded-2xl overflow-hidden">
+        <div class="tech-photo tech-photo-alt-3 grain h-72 w-full">
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783038181/IMG_5545_m2gfe2.jpg" alt="">
+        </div>
+        <div class="absolute inset-0 bg-black/45 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+          <p class="font-grotesk text-white font-bold text-lg">Infraestructuras</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA HISTORIA ============ -->
+<section id="historia" class="bg-[#F6F6F4] px-5 sm:px-8 py-20 sm:py-28">
+  <div class="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="order-2 lg:order-1">
+      <span class="font-grotesk text-xs font-bold tracking-[0.25em] text-black/45 uppercase">Nuestra historia</span>
+      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-black tracking-tight mt-3 leading-tight">
+        De la tierrita pal mundo.
+      </h2>
+      <div class="mt-6 space-y-4 text-base text-black/65 leading-relaxed">
+        <p>
+          En tecno mobile empezamos con una caja de herramientas, muchas ganas de camellar y la firme convicción de que la tecnología no tiene por qué ser un dolor de cabeza.
+        </p>
+        <p>
+          De arreglar computadores en el barrio pasamos a programar software para clientes serios, sin perder esa mano de obra honesta que nos enseñaron desde chiquitos. Hoy le combinamos código, fierros y buena fotografía a cada proyecto, con la misma berraquera del primer día.
+        </p>
+      </div>
+    </div>
+
+    <div class="order-1 lg:order-2">
+      <div class="historia-frame rounded-[2rem] p-3 sm:p-4">
+        <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1783433044/WhatsApp_Image_2026-07-07_at_9.01.35_AM_z5sh7x.jpg" alt="">
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- ============ SERVICIOS ============ -->
-<section id="servicios" class="bg-white px-5 sm:px-8 py-20 sm:py-28">
-  <div class="max-w-[1300px] mx-auto">
-
-    <div class="mb-14 sm:mb-16 max-w-xl">
-      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-black tracking-tight">Servicios</h2>
-      <p class="mt-4 text-black/60 text-base leading-relaxed">
-        Cuatro disciplinas, un mismo estándar de precisión.
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" class="bg-black px-5 sm:px-8 py-20 sm:py-28">
+  <div class="max-w-[1300px] mx-auto flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
+    <div class="max-w-lg">
+      <span class="font-grotesk text-xs font-bold tracking-[0.25em] text-white/45 uppercase">Contacto</span>
+      <h2 class="font-syne font-extrabold text-3xl sm:text-4xl text-white tracking-tight mt-3">Hablemos pues.</h2>
+      <p class="mt-4 text-white/55 text-base leading-relaxed">
+        Cuéntenos qué necesita y le armamos el camello. Sin rodeos, sin varadas.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#222222] border border-[#222222]">
-
-      <!-- Card 1 -->
-      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
-        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="8 9 4 12 8 15"></polyline>
-          <polyline points="16 9 20 12 16 15"></polyline>
-          <line x1="13" y1="6" x2="11" y2="18"></line>
-        </svg>
-        <div>
-          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Desarrollo &amp; Testing</h3>
-          <p class="text-sm text-black/60 leading-relaxed">
-            Construcción de aplicaciones robustas, arquitectura de software y aseguramiento de calidad (QA).
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
-        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="4" y="4" width="16" height="10" rx="1"></rect>
-          <line x1="8" y1="20" x2="16" y2="20"></line>
-          <line x1="12" y1="14" x2="12" y2="20"></line>
-        </svg>
-        <div>
-          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Tienda de Tecnología</h3>
-          <p class="text-sm text-black/60 leading-relaxed">
-            Hardware premium, componentes optimizados y dispositivos de última generación.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
-        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 8a2 2 0 0 1 2-2h1.2a1 1 0 0 0 .83-.45L9 4h6l.97 1.55a1 1 0 0 0 .83.45H18a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path>
-          <circle cx="12" cy="13" r="3.2"></circle>
-        </svg>
-        <div>
-          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Fotografía Profesional</h3>
-          <p class="text-sm text-black/60 leading-relaxed">
-            Producción audiovisual, dirección de arte digital y edición de alta fidelidad.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-white p-8 flex flex-col gap-6 hover:bg-[#F9F9F9] transition-colors duration-300">
-        <svg class="w-9 h-9 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-        </svg>
-        <div>
-          <h3 class="font-grotesk font-bold text-lg text-black mb-2">Soporte Técnico</h3>
-          <p class="text-sm text-black/60 leading-relaxed">
-            Diagnóstico, reparación de computadores, mantenimiento preventivo y optimización de sistemas.
-          </p>
-        </div>
-      </div>
-
+    <div class="glass-card rounded-2xl p-7 sm:p-8 min-w-full sm:min-w-[340px] flex flex-col gap-4">
+      <a href="mailto:hola@tecnomobile.co" class="font-grotesk text-white text-sm hover:opacity-70 transition-opacity">hola@tecnomobile.co</a>
+      <a href="tel:+573000000000" class="font-grotesk text-white text-sm hover:opacity-70 transition-opacity">+57 300 000 0000</a>
+      <span class="font-grotesk text-white/50 text-xs">Medellín, Colombia</span>
     </div>
   </div>
+
+  <p class="max-w-[1300px] mx-auto mt-16 pt-8 border-t border-white/10 text-white/35 text-xs font-grotesk">
+    © 2026 tecno mobile. Todos los derechos reservados.
+  </p>
 </section>
 
 <script>
@@ -158,6 +311,13 @@
     menuPanel.classList.toggle('hidden');
     menuBtn.setAttribute('aria-expanded', String(!isOpen));
   });
+
+  const island = document.getElementById('island');
+  const onScroll = () => {
+    island.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 </script>
 
 </body>

@@ -1,0 +1,159 @@
+/* ============================================================
+   productos.css
+   Reglas adicionales SOLO para la página de productos.
+   Se enlaza DESPUÉS de styles.css (usa .island, .glass-card,
+   .nav-link, .grain, .tech-photo, fuentes, etc. ya definidas ahí).
+   ============================================================ */
+
+/* ============ Barra de filtros por marca ============ */
+.filter-pill {
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.65);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 18px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.filter-pill:hover {
+  border-color: rgba(0, 0, 0, 0.35);
+  color: #000000;
+}
+
+.filter-pill.active {
+  background-color: #000000;
+  border-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Contenedor de filtros: scroll horizontal en móvil sin barra visible */
+.filter-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============ Tarjeta de producto ============ */
+.product-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Transición de entrada/salida al filtrar */
+.product-card[data-hidden="true"] {
+  display: none;
+}
+
+/* ============ Placeholder de foto de producto ============ */
+.product-img-placeholder {
+  background-color: #FAFAFA;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ABABAB;
+  text-align: center;
+  position: relative;
+}
+
+.product-img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1.5px dashed #D8D8D8;
+  border-radius: 0.75rem;
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.product-card:hover .product-img-placeholder::before {
+  border-color: #000000;
+}
+
+.product-img-placeholder svg {
+  width: 30px;
+  height: 30px;
+  opacity: 0.55;
+  position: relative;
+}
+
+.product-img-placeholder span {
+  font-size: 11px;
+  position: relative;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+/* ============ Insignia de marca sobre la imagen ============ */
+.brand-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #FFFFFF;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 9999px;
+}
+
+/* ============ Precio ============ */
+.price-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: -0.01em;
+}
+
+.price-tag-note {
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* ============ Select de orden ============ */
+.sort-select {
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #000000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+/* ============ Accesibilidad ============ */
+@media (prefers-reduced-motion: reduce) {
+  .filter-pill,
+  .product-card,
+  .product-img-placeholder::before {
+    transition: none;
+  }
+}
